@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Gym House Delhi NCR | Ultra Premium Fitness Club & Gym</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --surface-2: #1b1b24;
+      --surface-glass: rgba(19, 19, 26, 0.85);
+      --accent: #ff2a4b;
+      --accent-glow: rgba(255, 42, 75, 0.4);
+      --accent-gradient: linear-gradient(135deg, #ff2a4b 0%, #ff6b35 100%);
+      --accent-gradient-2: linear-gradient(135deg, #ff6b35 0%, #f7c531 100%);
+      --text: #f5f5f7;
+      --text-muted: #9a9ab0;
+      --text-dim: #686880;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(255, 42, 75, 0.35);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.6);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.8);
+      --shadow-neon: 0 0 25px rgba(255, 42, 75, 0.4);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .brand-font {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* TOP TICKER */
+    .top-ticker {
+      background: var(--accent-gradient);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.45rem 1rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 101;
+    }
+    .top-ticker span { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .top-ticker a {
+      background: rgba(0,0,0,0.35);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .top-ticker a:hover { background: #000; }
+
+    /* NAVBAR */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 15, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .logo-badge {
+      background: var(--accent-gradient);
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 800;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: var(--shadow-neon);
+    }
+    .logo-text span { color: var(--accent); }
+    .logo-sub {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: var(--text-muted);
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-menu a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 0.3rem 0;
+    }
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-menu a:hover { color: #fff; }
+    .nav-menu a:hover::after { width: 100%; }
+    .nav-actions { display: flex; align-items: center; gap: 1rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(255, 42, 75, 0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 30px rgba(255, 42, 75, 0.6);
+      color: #fff;
+    }
+    .btn-outline {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: #fff;
+      backdrop-filter: blur(10px);
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      background: rgba(255,42,75,0.12);
+      transform: translateY(-3px);
+    }
+    .btn-call {
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+    }
+    .btn-call:hover {
+      background: #20ba5a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37,211,102,0.5);
+      color: #fff;
+    }
+    .btn-lg { padding: 1.1rem 2.2rem; font-size: 1.1rem; border-radius: var(--radius-md); }
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 1.5rem 5rem;
+      overflow: hidden;
+    }
+    .hero-bg-container { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: brightness(0.38) contrast(1.15) saturate(1.1);
+      transform: scale(1.05);
+      animation: zoomSlow 20s infinite alternate ease-in-out;
+    }
+    @keyframes zoomSlow {
+      0% { transform: scale(1.02); }
+      100% { transform: scale(1.12); }
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(255,42,75,0.18) 0%, transparent 60%),
+        linear-gradient(to bottom, rgba(10,10,15,0.3) 0%, rgba(10,10,15,0.8) 70%, var(--bg) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 960px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(255,42,75,0.15);
+      border: 1px solid var(--border-accent);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #ff8597;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.8rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255,42,75,0.25);
+      animation: pulse 3s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.95; }
+      50% { transform: scale(1.04); opacity: 1; box-shadow: 0 0 30px rgba(255,42,75,0.5); }
+    }
+    .hero-title {
+      font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 1.4rem;
+      color: #fff;
+      text-shadow: 0 6px 30px rgba(0,0,0,0.9);
+    }
+    .hero-title .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    .hero-desc {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: #d1d1e0;
+      max-width: 750px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
+      line-height: 1.6;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+    .hero-contact-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--surface-glass);
+      border: 1px solid var(--border);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      backdrop-filter: blur(15px);
+      box-shadow: var(--shadow-md);
+    }
+    .hero-contact-strip .phone-highlight {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .phone-highlight .dot {
+      width: 10px; height: 10px;
+      background: #00ff88;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00ff88;
+      display: inline-block;
+    }
+
+    /* STATS */
+    .stats-section {
+      position: relative; z-index: 2;
+      margin-top: -3.5rem;
+      padding: 0 1.5rem 4rem;
+    }
+    .stats-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      box-shadow: var(--shadow-md);
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent-gradient);
+      opacity: 0.8;
+    }
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-accent);
+      box-shadow: 0 15px 35px rgba(255,42,75,0.2);
+    }
+    .stat-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* SECTION HEADERS */
+    .section-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 3.5rem;
+      padding: 0 1rem;
+    }
+    .section-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.6rem;
+      display: inline-block;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .section-desc { color: var(--text-muted); font-size: 1.1rem; line-height: 1.65; }
+
+    /* GALLERY */
+    .gallery-section { padding: 6rem 1.5rem; background: var(--bg); }
+    .gallery-grid {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      min-height: 320px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    .gallery-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: var(--border-accent);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.7), 0 0 30px rgba(255,42,75,0.3);
+    }
+    .gallery-card.col-8 { grid-column: span 8; min-height: 380px; }
+    .gallery-card.col-4 { grid-column: span 4; min-height: 380px; }
+    .gallery-card.col-4-mid { grid-column: span 4; min-height: 340px; }
+    .gallery-card.col-6 { grid-column: span 6; min-height: 360px; }
+    .gallery-img-wrapper { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .gallery-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gallery-card:hover .gallery-img { transform: scale(1.1); }
+    .gallery-gradient {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,15,0.1) 0%, rgba(10,10,15,0.6) 50%, rgba(10,10,15,0.95) 100%);
+    }
+    .gallery-content {
+      position: absolute; inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      z-index: 2;
+    }
+    .gallery-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #fff;
+      background: var(--accent-gradient);
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      align-self: flex-start;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 2px 10px rgba(255,42,75,0.4);
+    }
+    .gallery-title { font-size: 1.8rem; color: #fff; margin-bottom: 0.4rem; transition: color 0.3s; }
+    .gallery-card:hover .gallery-title { color: #ff7588; }
+    .gallery-desc { color: #c5c5d8; font-size: 0.95rem; line-height: 1.5; max-width: 520px; }
+    .gallery-specs {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.85rem;
+      color: #fff;
+    }
+    .gallery-specs span { display: flex; align-items: center; gap: 0.35rem; }
+
+    /* FEATURES */
+    .features-section { padding: 6rem 1.5rem; background: var(--surface); }
+    .features-grid {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--border-accent);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.7), 0 0 25px rgba(255,42,75,0.2);
+    }
+    .feature-icon-box {
+      width: 70px; height: 70px;
+      border-radius: var(--radius-md);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
+      transition: all 0.35s ease;
+    }
+    .feature-card:hover .feature-icon-box {
+      background: var(--accent-gradient);
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: var(--shadow-neon);
+    }
+    .feature-card h3 { font-size: 1.5rem; color: #fff; margin-bottom: 0.8rem; }
+    .feature-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 1.5rem; flex-grow: 1; }
+    .feature-points { list-style: none; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+    .feature-points li {
+      font-size: 0.9rem; color: #d1d1e0;
+      margin-bottom: 0.5rem;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .feature-points li::before { content: '✓'; color: var(--accent); font-weight: 800; }
+
+    /* TRAINERS */
+    .trainers-section { padding: 6rem 1.5rem; background: var(--bg); }
+    .trainers-grid {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.8rem;
+    }
+    .trainer-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .trainer-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-accent);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    }
+    .trainer-img-wrapper { position: relative; height: 360px; overflow: hidden; }
+    .trainer-img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      transition: transform 0.6s ease;
+    }
+    .trainer-card:hover .trainer-img { transform: scale(1.08); }
+    .trainer-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(19,19,26,0.95) 100%);
+    }
+    .trainer-info { padding: 1.5rem; }
+    .trainer-badge { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+    .trainer-name { font-size: 1.4rem; color: #fff; margin-bottom: 0.4rem; }
+    .trainer-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem; }
+    .trainer-call-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #fff;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .trainer-call-btn:hover { background: var(--accent); border-color: var(--accent); }
+
+    /* BMI CALCULATOR */
+    .interactive-section { padding: 6rem 1.5rem; background: var(--surface); overflow: hidden; }
+    .interactive-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .interactive-text h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.2rem; }
+    .interactive-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; }
+    .calc-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .calc-card h3 { font-size: 1.6rem; color: #fff; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-group input, .form-group select {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 10px rgba(255,42,75,0.3);
+    }
+    .calc-btn { width: 100%; margin-top: 0.8rem; }
+    .bmi-result-box {
+      margin-top: 1.8rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      display: none;
+    }
+    .bmi-score { font-family: 'Oswald', sans-serif; font-size: 2.4rem; color: var(--accent); font-weight: 700; }
+    .bmi-category { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+    .bmi-advice { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* PRICING */
+    .pricing-section { padding: 6rem 1.5rem; background: var(--bg); }
+    .pricing-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 3rem 2.2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+    }
+    .price-card.featured {
+      background: var(--surface-2);
+      border-color: var(--accent);
+      box-shadow: 0 0 40px rgba(255,42,75,0.25);
+      transform: scale(1.04);
+    }
+    .featured-badge {
+      position: absolute;
+      top: -15px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-gradient);
+      color: white;
+      padding: 0.4rem 1.4rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-neon);
+    }
+    .price-tier { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+    .price-amount { display: flex; align-items: baseline; gap: 0.3rem; margin-bottom: 1.5rem; }
+    .price-currency { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .price-val { font-family: 'Oswald', sans-serif; font-size: 3.5rem; font-weight: 700; color: #fff; line-height: 1; }
+    .price-period { color: var(--text-muted); font-size: 0.95rem; }
+    .price-features { list-style: none; margin-bottom: 2.5rem; flex-grow: 1; }
+    .price-features li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.95rem; color: #d1d1e0;
+      display: flex; align-items: center; gap: 0.7rem;
+    }
+    .price-features li::before { content: '✓'; color: #00ff88; font-weight: 800; }
+    .price-features li.disabled { color: var(--text-dim); text-decoration: line-through; }
+    .price-features li.disabled::before { content: '✕'; color: var(--text-dim); }
+
+    /* REVIEWS */
+    .reviews-section { padding: 6rem 1.5rem; background: var(--surface); }
+    .reviews-grid {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .review-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .review-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-accent);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    }
+    .review-stars { color: #ffb703; font-size: 1.25rem; margin-bottom: 1.2rem; letter-spacing: 0.15em; }
+    .review-quote { color: #f0f0f5; font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+    .author-img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); }
+    .author-name { font-size: 1.1rem; color: #fff; font-weight: 700; }
+    .author-role { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* LOCATIONS */
+    .locations-section { padding: 6rem 1.5rem; background: var(--bg); }
+    .locations-grid {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .location-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    .location-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-md);
+    }
+    .location-card h3 { font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem; }
+    .location-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.2rem; }
+    .location-badge {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700;
+      color: #00ff88;
+      background: rgba(0,255,136,0.1);
+      border: 1px solid rgba(0,255,136,0.3);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .location-phone { font-weight: 700; color: var(--accent); display: flex; align-items: center; gap: 0.4rem; font-size: 1rem; }
+
+    /* VIP PASS SECTION */
+    .vip-banner-section {
+      padding: 5rem 1.5rem;
+      background: linear-gradient(135deg, rgba(255,42,75,0.15) 0%, rgba(255,107,53,0.08) 100%);
+      border-top: 1px solid var(--border-accent);
+      border-bottom: 1px solid var(--border-accent);
+    }
+    .vip-box {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-xl);
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .vip-content h2 { font-size: 2.8rem; margin-bottom: 1rem; color: #fff; }
+    .vip-content p { color: #c5c5d8; font-size: 1.1rem; margin-bottom: 2rem; }
+    .vip-form { background: var(--bg); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+    .vip-form .form-group { margin-bottom: 1rem; }
+
+    /* FLOATING ACTIONS */
+    .floating-actions {
+      position: fixed;
+      bottom: 25px; right: 25px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .fab-btn {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.6rem;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      text-decoration: none;
+    }
+    .fab-btn:hover { transform: scale(1.12) translateY(-3px); }
+    .fab-whatsapp { background: #25d366; box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
+    .fab-call {
+      background: var(--accent-gradient);
+      box-shadow: 0 6px 20px rgba(255,42,75,0.5);
+      animation: fabPulse 2.5s infinite;
+    }
+    @keyframes fabPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,42,75,0.7); }
+      50% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255,42,75,0); }
+    }
+    .fab-tooltip {
+      position: absolute;
+      right: 70px;
+      background: rgba(10,10,15,0.9);
+      color: #fff;
+      font-size: 0.8rem; font-weight: 700;
+      white-space: nowrap;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .fab-btn:hover .fab-tooltip { opacity: 1; }
+
+    /* FOOTER */
+    .footer { background: #08080c; border-top: 1px solid var(--border); padding: 5rem 1.5rem 2rem; }
+    .footer-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    .footer-brand .logo { margin-bottom: 1.2rem; }
+    .footer-brand p { color: var(--text-muted); line-height: 1.6; max-width: 340px; margin-bottom: 1.5rem; }
+    .footer-col h4 { font-size: 1.2rem; color: #fff; margin-bottom: 1.5rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.8rem; }
+    .footer-col ul a { color: var(--text-muted); font-size: 0.95rem; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--accent); }
+    .footer-contact-info li { display: flex; align-items: flex-start; gap: 0.8rem; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .footer-phone-big { font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: #fff; display: block; margin-top: 0.5rem; letter-spacing: 0.05em; }
+    .footer-phone-big:hover { color: var(--accent); }
+    .footer-bottom {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* MODAL */
+    .modal {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .modal.active { opacity: 1; pointer-events: all; }
+    .modal-content {
+      background: var(--surface);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-xl);
+      max-width: 500px; width: 100%;
+      padding: 2.5rem;
+      position: relative;
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+      box-shadow: var(--shadow-lg);
+    }
+    .modal.active .modal-content { transform: scale(1); }
+    .modal-close {
+      position: absolute;
+      top: 1.2rem; right: 1.2rem;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: #fff;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .gallery-card.col-8, .gallery-card.col-4, .gallery-card.col-4-mid, .gallery-card.col-6 { grid-column: span 6; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .trainers-grid { grid-template-columns: repeat(2, 1fr); }
+      .locations-grid { grid-template-columns: repeat(2, 1fr); }
+      .interactive-container { grid-template-columns: 1fr; }
+      .vip-box { grid-template-columns: 1fr; padding: 2.5rem 1.8rem; }
+      .footer-container { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .nav-menu {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-150%);
+        transition: transform 0.35s ease;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .nav-menu.active { transform: translateY(0); opacity: 1; pointer-events: all; }
+      .stats-container { grid-template-columns: repeat(2, 1fr); }
+      .gallery-card.col-8, .gallery-card.col-4, .gallery-card.col-4-mid, .gallery-card.col-6 { grid-column: span 12; }
+      .features-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card.featured { transform: scale(1); }
+      .trainers-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .locations-grid { grid-template-columns: 1fr; }
+      .input-row { grid-template-columns: 1fr; }
+      .footer-container { grid-template-columns: 1fr; }
+      .hero-contact-strip { flex-direction: column; gap: 0.6rem; }
+      .top-ticker { flex-direction: column; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-ticker">
+    <span>&#128293; New VIP Batch Starting in Delhi NCR &mdash; Get 40% Off Annual Passes Today</span>
+    <span>&#128222; Direct Helpline: <a href="tel:7011718612">7011718612</a></span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <div class="logo-badge">GH</div>
+        <div class="logo-text">
+          GYM HOUSE <span>NCR</span>
+          <span class="logo-sub">DELHI &bull; NOIDA &bull; GURUGRAM</span>
+        </div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#equipment">Equipment</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#calculator">BMI Tool</a></li>
+        <li><a href="#pricing">Memberships</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#locations">Locations</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="tel:7011718612" class="btn btn-outline">&#128222; 7011718612</a>
+        <button class="btn btn-primary" onclick="openPassModal()">Free VIP Pass</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-container">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80" alt="Gym House Luxury Facility" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>&#9889; Delhi NCR&rsquo;s #1 Luxury Fitness Destination</span>
+      </div>
+      <h1 class="hero-title">
+        UNLEASH YOUR <span class="gradient-text">INNER BEAST</span>
+      </h1>
+      <p class="hero-desc">
+        Welcome to <strong>Gym House of Delhi NCR</strong> &mdash; 30,000+ sq.ft. of world-class Hammer Strength &amp; Olympic equipment, Olympic heated swimming pools, certified master trainers, and an elite fitness community.
+      </p>
+      <div class="hero-cta-group">
+        <button class="btn btn-primary btn-lg" onclick="openPassModal()">&#9889; Claim 1-Day Free VIP Pass</button>
+        <a href="tel:7011718612" class="btn btn-outline btn-lg">&#128222; Call Now: 7011718612</a>
+        <a href="https://wa.me/917011718612?text=Hi%20Gym%20House,%20I%20want%20to%20know%20more%20about%20membership%20plans" target="_blank" class="btn btn-call btn-lg">&#128172; WhatsApp Us</a>
+      </div>
+      <div class="hero-contact-strip">
+        <div class="phone-highlight">
+          <span class="dot"></span>
+          <span>Open Today: 5:00 AM &ndash; 11:30 PM</span>
+        </div>
+        <div style="color:var(--text-muted);font-size:0.95rem;">
+          VIP Concierge: <a href="tel:7011718612" style="color:#fff;font-weight:700;text-decoration:underline;">+91 7011718612</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-number" data-count="5000">0</div>
+        <div class="stat-label">Active Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="30">0</div>
+        <div class="stat-label">Sq. Ft. (Thousands)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="25">0</div>
+        <div class="stat-label">Certified Coaches</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="98">0</div>
+        <div class="stat-label">% Satisfaction Rate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="facilities">
+    <div class="section-header">
+      <span class="section-tag">ELITE INFRASTRUCTURE</span>
+      <h2 class="section-title">WORLD-CLASS GYM FACILITIES</h2>
+      <p class="section-desc">Every square inch engineered with international fitness standards, biomechanically superior machinery, and hygienic luxury environments.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-card col-8">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=80" alt="Free Weights and Heavy Barbell Zone" class="gallery-img">
+          <div class="gallery-gradient"></div>
+        </div>
+        <div class="gallery-content">
+          <span class="gallery-tag">STRENGTH ARENA</span>
+          <h3 class="gallery-title">Heavy Weight &amp; Powerlifting Zone</h3>
+          <p class="gallery-desc">Over 10 tons of calibrated urethane dumbbells up to 70kg, Eleiko Olympic barbells, power cages, and competition-spec bench presses.</p>
+          <div class="gallery-specs">
+            <span>&#127947; Hammer Strength</span>
+            <span>&#9889; Eleiko Bars</span>
+            <span>&#128737; Shock-Absorptive Rubber</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card col-4">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80" alt="Cardio Suite" class="gallery-img">
+          <div class="gallery-gradient"></div>
+        </div>
+        <div class="gallery-content">
+          <span class="gallery-tag">CARDIO ARENA</span>
+          <h3 class="gallery-title">Interactive Cardio Suite</h3>
+          <p class="gallery-desc">Life Fitness &amp; Matrix touch-screen treadmills, curved self-powered runners, Concept2 rowers, and Stairmasters.</p>
+        </div>
+      </div>
+      <div class="gallery-card col-4-mid">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Functional Turf" class="gallery-img">
+          <div class="gallery-gradient"></div>
+        </div>
+        <div class="gallery-content">
+          <span class="gallery-tag">CROSSFIT &amp; TURF</span>
+          <h3 class="gallery-title">Functional Training Turf</h3>
+          <p class="gallery-desc">50-meter indoor sprint turf, sled pushes, battle ropes, plyometric boxes, assault bikes, and kettlebell arrays.</p>
+        </div>
+      </div>
+      <div class="gallery-card col-4-mid">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Olympic Pool" class="gallery-img">
+          <div class="gallery-gradient"></div>
+        </div>
+        <div class="gallery-content">
+          <span class="gallery-tag">AQUATICS &amp; SPA</span>
+          <h3 class="gallery-title">Olympic Temperature-Controlled Pool</h3>
+          <p class="gallery-desc">Year-round climate-controlled indoor lap pool with ozone filtration, dedicated swim lanes, and hydrotherapy jacuzzi.</p>
+        </div>
+      </div>
+      <div class="gallery-card col-4-mid">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Group Studio" class="gallery-img">
+          <div class="gallery-gradient"></div>
+        </div>
+        <div class="gallery-content">
+          <span class="gallery-tag">STUDIO &amp; DANCE</span>
+          <h3 class="gallery-title">High-Energy Studio</h3>
+          <p class="gallery-desc">Dynamic acoustic-lit studio for Zumba, Les Mills BodyPump, Power Yoga, Spin Cycling, and HIIT bootcamps.</p>
+        </div>
+      </div>
+      <div class="gallery-card col-6">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80" alt="Personal Training" class="gallery-img">
+          <div class="gallery-gradient"></div>
+        </div>
+        <div class="gallery-content">
+          <span class="gallery-tag">1-ON-1 COACHING</span>
+          <h3 class="gallery-title">VIP Personal Training Suites</h3>
+          <p class="gallery-desc">Dedicated private training bays with certified IFBB &amp; ACE master coaches, posture correction analysis, and personalized programming.</p>
+        </div>
+      </div>
+      <div class="gallery-card col-6">
+        <div class="gallery-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Recovery Lounge" class="gallery-img">
+          <div class="gallery-gradient"></div>
+        </div>
+        <div class="gallery-content">
+          <span class="gallery-tag">RECOVERY &amp; WELLNESS</span>
+          <h3 class="gallery-title">Steam, Sauna &amp; Recovery Lounge</h3>
+          <p class="gallery-desc">Finnish dry wood saunas, eucalyptus steam baths, percussive massage gun recovery station, and fresh protein shake bar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="equipment">
+    <div class="section-header">
+      <span class="section-tag">PREMIUM FEATURES &amp; PERKS</span>
+      <h2 class="section-title">WHY GYM HOUSE STANDS UNRIVALED</h2>
+      <p class="section-desc">We don&rsquo;t just offer gym access &mdash; we deliver an end-to-end luxury fitness ecosystem built around your goals.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-box">&#127942;</div>
+        <h3>Imported Biomechanical Machinery</h3>
+        <p>100% authentic Hammer Strength, Life Fitness, and Matrix machines calibrated for optimal muscle activation and zero joint strain.</p>
+        <ul class="feature-points">
+          <li>Custom pin-loaded and plate-loaded stacks</li>
+          <li>Dual adjustable cable crossovers &amp; smith machines</li>
+          <li>Deadlift platforms with bumper plates</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-box">&#129516;</div>
+        <h3>Medical-Grade Body Composition</h3>
+        <p>Monthly 3D InBody 770 biometric scans tracking your visceral fat, skeletal muscle mass, basal metabolic rate, and hydration levels.</p>
+        <ul class="feature-points">
+          <li>Detailed segmented muscle balance reports</li>
+          <li>Direct mobile app sync with progress tracking</li>
+          <li>Nutrition adjustments based on data</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-box">&#129365;</div>
+        <h3>Custom Indian &amp; Western Nutrition Plans</h3>
+        <p>Clinical sports dietitians craft delicious, macro-balanced diet charts suited to your vegetarian, vegan, or non-veg preferences.</p>
+        <ul class="feature-points">
+          <li>Fat-loss, lean muscle gain &amp; keto protocols</li>
+          <li>Supplement guidance &amp; authentic whey protein</li>
+          <li>Weekly dietitian check-ins</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-box">&#128293;</div>
+        <h3>50+ Weekly Group Classes</h3>
+        <p>Unlimited access to exhilarating group sessions led by certified international instructors with concert-grade sound and lighting.</p>
+        <ul class="feature-points">
+          <li>Zumba, Bollywood Dance &amp; HIIT Cardio</li>
+          <li>Power Yoga, Mobility &amp; Ashtanga Flow</li>
+          <li>Boxing conditioning &amp; MMA basics</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-box">&#128703;</div>
+        <h3>5-Star Luxury Locker Rooms</h3>
+        <p>Spacious, climate-controlled changing suites with private rain showers, steam rooms, digital lockers, and hair styling stations.</p>
+        <ul class="feature-points">
+          <li>Complimentary plush fresh towels &amp; toiletries</li>
+          <li>Sanitized Finnish cedarwood saunas</li>
+          <li>Shoe &amp; apparel valet storage</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-box">&#127359;</div>
+        <h3>Valet Parking &amp; Prime Connectivity</h3>
+        <p>Seamless access with dedicated multi-level valet parking, high-speed WiFi, and 24/7 security across all Delhi NCR locations.</p>
+        <ul class="feature-points">
+          <li>Safe underground parking bays</li>
+          <li>Next to major Delhi Metro stations</li>
+          <li>Cafe lounge &amp; co-working fitness pods</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section class="trainers-section" id="trainers">
+    <div class="section-header">
+      <span class="section-tag">ELITE COACHING STAFF</span>
+      <h2 class="section-title">MEET OUR MASTER TRAINERS</h2>
+      <p class="section-desc">Certified coaches with international credentials dedicated to your transformation with safe, science-backed methodology.</p>
+    </div>
+    <div class="trainers-grid">
+      <div class="trainer-card">
+        <div class="trainer-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Trainer Vikram Singh" class="trainer-img">
+          <div class="trainer-overlay"></div>
+        </div>
+        <div class="trainer-info">
+          <div class="trainer-badge">HEAD STRENGTH COACH</div>
+          <h3 class="trainer-name">Vikram Singh</h3>
+          <p class="trainer-desc">IFBB Pro Certified &bull; 10+ Years in Hypertrophy &amp; Olympic Powerlifting.</p>
+          <a href="tel:7011718612" class="trainer-call-btn">&#128222; Book 1:1 Consultation</a>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <div class="trainer-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80" alt="Trainer Ananya Roy" class="trainer-img">
+          <div class="trainer-overlay"></div>
+        </div>
+        <div class="trainer-info">
+          <div class="trainer-badge">CROSSFIT &amp; HIIT LEAD</div>
+          <h3 class="trainer-name">Ananya Roy</h3>
+          <p class="trainer-desc">CrossFit Level 2 Coach &bull; Female Fat Loss, Stamina &amp; Functional Agility.</p>
+          <a href="tel:7011718612" class="trainer-call-btn">&#128222; Book 1:1 Consultation</a>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <div class="trainer-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Trainer Rohan Verma" class="trainer-img">
+          <div class="trainer-overlay"></div>
+        </div>
+        <div class="trainer-info">
+          <div class="trainer-badge">TRANSFORMATION SPECIALIST</div>
+          <h3 class="trainer-name">Rohan Verma</h3>
+          <p class="trainer-desc">ACE Certified &bull; 350+ Verified Client Transformations across Delhi NCR.</p>
+          <a href="tel:7011718612" class="trainer-call-btn">&#128222; Book 1:1 Consultation</a>
+        </div>
+      </div>
+      <div class="trainer-card">
+        <div class="trainer-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Trainer Sneha Kapoor" class="trainer-img">
+          <div class="trainer-overlay"></div>
+        </div>
+        <div class="trainer-info">
+          <div class="trainer-badge">YOGA &amp; NUTRITION MASTER</div>
+          <h3 class="trainer-name">Sneha Kapoor</h3>
+          <p class="trainer-desc">500-Hr Yoga Alliance &amp; Sports Dietitian &bull; Posture, Mobility &amp; Lean Toning Expert.</p>
+          <a href="tel:7011718612" class="trainer-call-btn">&#128222; Book 1:1 Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI CALCULATOR -->
+  <section class="interactive-section" id="calculator">
+    <div class="interactive-container">
+      <div class="interactive-text">
+        <span class="section-tag">SMART FITNESS ENGINE</span>
+        <h2 class="section-title">CALCULATE YOUR BMI &amp; BODY TARGETS</h2>
+        <p>Know your baseline numbers before you step onto the training floor. Get instant feedback on your Body Mass Index and daily caloric targets.</p>
+        <div style="display:flex;gap:1.5rem;margin-top:2rem;">
+          <div style="background:var(--bg);border:1px solid var(--border);padding:1.2rem;border-radius:12px;flex:1;">
+            <div style="font-size:1.8rem;font-weight:700;color:var(--accent);font-family:'Oswald';">18.5&ndash;24.9</div>
+            <div style="color:var(--text-muted);font-size:0.85rem;">Ideal Healthy BMI Range</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--border);padding:1.2rem;border-radius:12px;flex:1;">
+            <div style="font-size:1.8rem;font-weight:700;color:#00ff88;font-family:'Oswald';">100% Free</div>
+            <div style="color:var(--text-muted);font-size:0.85rem;">Trainer Consultation Included</div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-card">
+        <h3>&#9889; BMI &amp; Goal Calculator</h3>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Gender</label>
+            <select id="calcGender"><option value="male">Male</option><option value="female">Female</option></select>
+          </div>
+          <div class="form-group">
+            <label>Age (Years)</label>
+            <input type="number" id="calcAge" value="26" min="14" max="80">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label>Height (cm)</label>
+            <input type="number" id="calcHeight" value="175" min="100" max="230">
+          </div>
+          <div class="form-group">
+            <label>Weight (kg)</label>
+            <input type="number" id="calcWeight" value="75" min="30" max="200">
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:1.2rem;">
+          <label>Primary Fitness Goal</label>
+          <select id="calcGoal">
+            <option value="fat_loss">Rapid Fat Loss &amp; Toning</option>
+            <option value="muscle_gain">Lean Muscle Hypertrophy</option>
+            <option value="strength">Heavy Strength &amp; Power</option>
+            <option value="general">General Wellness &amp; Mobility</option>
+          </select>
+        </div>
+        <button class="btn btn-primary calc-btn" onclick="calculateBMI()">Calculate My Fitness Matrix</button>
+        <div class="bmi-result-box" id="bmiResult">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8rem;">
+            <div>
+              <div class="bmi-score" id="bmiValue">24.5</div>
+              <div class="bmi-category" id="bmiStatus">Healthy Weight Range</div>
+            </div>
+            <a href="tel:7011718612" class="btn btn-primary" style="font-size:0.85rem;padding:0.6rem 1.2rem;">Discuss Plan</a>
+          </div>
+          <p class="bmi-advice" id="bmiAdvice">Your body composition is in a great baseline range. We recommend a high-protein caloric surplus with our hypertrophy strength program.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-header">
+      <span class="section-tag">TRANSPARENT VALUE</span>
+      <h2 class="section-title">MEMBERSHIP PLANS</h2>
+      <p class="section-desc">Flexible packages designed for every commitment level with zero hidden charges and full facility access.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">SILVER FITNESS</div>
+        <div class="price-amount">
+          <span class="price-currency">&#8377;</span>
+          <span class="price-val">2,499</span>
+          <span class="price-period">/ month</span>
+        </div>
+        <ul class="price-features">
+          <li>Full Gym &amp; Free Weights Access</li>
+          <li>Cardio Suite &amp; Resistance Machines</li>
+          <li>Locker &amp; Shower Facilities</li>
+          <li>1 Complimentary InBody Scan</li>
+          <li class="disabled">Olympic Swimming Pool</li>
+          <li class="disabled">Unlimited Group Classes</li>
+          <li class="disabled">Steam &amp; Sauna Recovery Lounge</li>
+        </ul>
+        <a href="tel:7011718612" class="btn btn-outline" style="width:100%;">Select Silver Plan</a>
+      </div>
+      <div class="price-card featured">
+        <div class="featured-badge">MOST POPULAR &bull; BEST VALUE</div>
+        <div class="price-tier">GOLD ALL-ACCESS</div>
+        <div class="price-amount">
+          <span class="price-currency">&#8377;</span>
+          <span class="price-val">4,999</span>
+          <span class="price-period">/ month</span>
+        </div>
+        <ul class="price-features">
+          <li>Full Gym Floor &amp; Strength Arenas</li>
+          <li>Olympic Swimming Pool &amp; Lap Lanes</li>
+          <li>Unlimited Zumba, CrossFit &amp; Yoga Classes</li>
+          <li>Finnish Steam &amp; Sauna Access</li>
+          <li>Monthly InBody 770 Composition Scans</li>
+          <li>Customized Diet Chart by Nutritionist</li>
+          <li>Valet Parking at all Delhi NCR Branches</li>
+        </ul>
+        <a href="tel:7011718612" class="btn btn-primary" style="width:100%;">&#9889; Join Gold All-Access</a>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">PLATINUM VIP ELITE</div>
+        <div class="price-amount">
+          <span class="price-currency">&#8377;</span>
+          <span class="price-val">8,999</span>
+          <span class="price-period">/ month</span>
+        </div>
+        <ul class="price-features">
+          <li>Everything in Gold All-Access</li>
+          <li>8 Personal Training Sessions / Month</li>
+          <li>Dedicated Senior Master Coach</li>
+          <li>Daily Post-Workout Protein Shake</li>
+          <li>Private VIP Locker with Laundry Valet</li>
+          <li>Access to all Delhi NCR Gym House Clubs</li>
+          <li>Guest Passes (2 per month)</li>
+        </ul>
+        <a href="tel:7011718612" class="btn btn-outline" style="width:100%;">Get Platinum VIP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-header">
+      <span class="section-tag">VERIFIED TRANSFORMATIONS</span>
+      <h2 class="section-title">WHAT OUR MEMBERS SAY</h2>
+      <p class="section-desc">Over 5,000+ Delhi NCR fitness enthusiasts have transformed their health, strength, and confidence at Gym House.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-quote">&ldquo;Hands down the best gym in Delhi NCR! The equipment is brand-new Hammer Strength, the Olympic pool is spotlessly clean, and Coach Vikram helped me drop 16kg in just 4 months. Totally life changing.&rdquo;</p>
+        </div>
+        <div class="review-author">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="Rahul Malhotra" class="author-img">
+          <div>
+            <div class="author-name">Rahul Malhotra</div>
+            <div class="author-role">Lost 16kg &bull; South Delhi Member</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-quote">&ldquo;The vibe and energy here is infectious. The Zumba and CrossFit studios feel like an absolute party every evening! Super safe for women, luxurious locker rooms, and great hygiene standards.&rdquo;</p>
+        </div>
+        <div class="review-author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Pooja Aggarwal" class="author-img">
+          <div>
+            <div class="author-name">Pooja Aggarwal</div>
+            <div class="author-role">Group Fitness &amp; Yoga Enthusiast</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-quote">&ldquo;As an avid powerlifter, finding a gym with calibrated Eleiko plates, deadlift platforms, and competition racks in Delhi NCR was tough until I found Gym House. The sauna after heavy leg days is unbeatable!&rdquo;</p>
+        </div>
+        <div class="review-author">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Arjun Singhal" class="author-img">
+          <div>
+            <div class="author-name">Arjun Singhal</div>
+            <div class="author-role">Powerlifter &bull; Gurugram Branch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="locations-section" id="locations">
+    <div class="section-header">
+      <span class="section-tag">MULTI-CITY PRESENCE</span>
+      <h2 class="section-title">DELHI NCR LOCATIONS</h2>
+      <p class="section-desc">Conveniently located near prime metro stations with dedicated valet parking and spacious air-conditioned floors.</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card">
+        <span class="location-badge">FLAGSHIP MEGA GYM</span>
+        <h3>South Delhi Club</h3>
+        <p>Ring Road, Near South Extension &amp; Lajpat Nagar Metro. 35,000 sq.ft. with Olympic Pool &amp; Rooftop Turf.</p>
+        <a href="tel:7011718612" class="location-phone">&#128222; 7011718612</a>
+      </div>
+      <div class="location-card">
+        <span class="location-badge">CYBER HUB ELITE</span>
+        <h3>Gurugram CyberCity</h3>
+        <p>Golf Course Road, DLF Phase 2. State-of-the-art strength zones &amp; executive corporate wellness lounge.</p>
+        <a href="tel:7011718612" class="location-phone">&#128222; 7011718612</a>
+      </div>
+      <div class="location-card">
+        <span class="location-badge">NOIDA EXPRESS</span>
+        <h3>Noida Sector 62</h3>
+        <p>Commercial Hub, Near Electronic City Metro. Massive 3-floor setup with CrossFit arena and steam spa.</p>
+        <a href="tel:7011718612" class="location-phone">&#128222; 7011718612</a>
+      </div>
+      <div class="location-card">
+        <span class="location-badge">CENTRAL HUB</span>
+        <h3>Connaught Place &amp; Dwarka</h3>
+        <p>Inner Circle CP &amp; Dwarka Sector 12. Complete modern fitness suite with 24/7 biometric keycard access.</p>
+        <a href="tel:7011718612" class="location-phone">&#128222; 7011718612</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP PASS SECTION -->
+  <section class="vip-banner-section">
+    <div class="vip-box">
+      <div class="vip-content">
+        <span class="section-tag">EXPERIENCE THE LUXURY</span>
+        <h2>GET YOUR COMPLIMENTARY 1-DAY VIP PASS</h2>
+        <p>Experience our world-class facilities, take a swim in the Olympic pool, and join a group workout session completely free of charge. No obligations.</p>
+        <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+          <a href="tel:7011718612" class="btn btn-primary btn-lg">&#128222; Call VIP Desk: 7011718612</a>
+          <a href="https://wa.me/917011718612?text=Hello%20Gym%20House,%20I%20want%20to%20claim%20my%201-Day%20Free%20VIP%20Pass!" target="_blank" class="btn btn-call btn-lg">&#128172; Claim via WhatsApp</a>
+        </div>
+      </div>
+      <div class="vip-form">
+        <h3 style="color:#fff;margin-bottom:1.2rem;font-size:1.4rem;">Instant Pass Registration</h3>
+        <form onsubmit="handlePassSubmit(event)">
+          <div class="form-group"><label>Full Name</label><input type="text" id="passName" placeholder="e.g. Aman Sharma" required></div>
+          <div class="form-group"><label>Mobile Number</label><input type="tel" id="passPhone" placeholder="e.g. 9876543210" required></div>
+          <div class="form-group">
+            <label>Preferred NCR Location</label>
+            <select id="passLocation">
+              <option>South Delhi Flagship</option>
+              <option>Gurugram CyberCity</option>
+              <option>Noida Sector 62</option>
+              <option>Dwarka / West Delhi</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.8rem;">&#9889; Generate Instant Digital Pass</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <div class="logo-badge">GH</div>
+          <div class="logo-text">GYM HOUSE <span>NCR</span></div>
+        </a>
+        <p>Delhi NCR&rsquo;s premier luxury fitness club. Transforming bodies, building discipline, and redefining health through world-class engineering and dedicated mentorship.</p>
+        <a href="tel:7011718612" class="btn btn-primary" style="padding:0.5rem 1rem;font-size:0.85rem;">&#128222; Direct Call: 7011718612</a>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#facilities">Gym Facilities</a></li>
+          <li><a href="#equipment">Imported Equipment</a></li>
+          <li><a href="#trainers">Master Trainers</a></li>
+          <li><a href="#calculator">BMI Calculator</a></li>
+          <li><a href="#pricing">Membership Plans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Delhi NCR Clubs</h4>
+        <ul>
+          <li><a href="#locations">South Delhi Flagship</a></li>
+          <li><a href="#locations">Gurugram CyberCity</a></li>
+          <li><a href="#locations">Noida Sector 62</a></li>
+          <li><a href="#locations">Connaught Place Hub</a></li>
+          <li><a href="#locations">Dwarka Sector 12</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact-info">
+        <h4>Direct Contact</h4>
+        <ul>
+          <li><span>&#128205;</span><span>Central Operations: Delhi NCR, New Delhi, India</span></li>
+          <li>
+            <span>&#128222;</span>
+            <div>
+              <span>24/7 Helpline &amp; WhatsApp:</span>
+              <a href="tel:7011718612" class="footer-phone-big">7011718612</a>
+            </div>
+          </li>
+          <li><span>&#9200;</span><span>Mon &ndash; Sun: 5:00 AM &ndash; 11:30 PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Gym House Delhi NCR. All rights reserved.</div>
+      <div>Helpline: <a href="tel:7011718612" style="color:var(--accent);font-weight:700;">7011718612</a> | Delhi &bull; Noida &bull; Gurugram</div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917011718612?text=Hello%20Gym%20House,%20I%20am%20interested%20in%20joining!" target="_blank" class="fab-btn fab-whatsapp" aria-label="WhatsApp Us">
+      &#128172;
+      <span class="fab-tooltip">Chat on WhatsApp (7011718612)</span>
+    </a>
+    <a href="tel:7011718612" class="fab-btn fab-call" aria-label="Call Gym House">
+      &#128222;
+      <span class="fab-tooltip">Call Now: 7011718612</span>
+    </a>
+  </div>
+
+  <!-- VIP PASS MODAL -->
+  <div class="modal" id="passModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closePassModal()">&times;</button>
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <div style="font-size:3rem;margin-bottom:0.5rem;">&#127903;</div>
+        <h3 style="color:#fff;font-size:1.8rem;margin-bottom:0.4rem;">YOUR 1-DAY VIP PASS</h3>
+        <p style="color:var(--text-muted);font-size:0.95rem;">Complimentary Full-Access Pass to Gym House Delhi NCR</p>
+      </div>
+      <div style="background:var(--bg);border:2px dashed var(--accent);border-radius:var(--radius-md);padding:1.5rem;text-align:center;margin-bottom:1.5rem;">
+        <div style="font-size:0.8rem;color:var(--accent);font-weight:800;letter-spacing:0.1em;text-transform:uppercase;">PASS CODE: GH-VIP-2026</div>
+        <div style="font-family:'Oswald';font-size:2rem;color:#fff;margin:0.4rem 0;" id="modalPassName">GUEST MEMBER</div>
+        <div style="color:#00ff88;font-size:0.9rem;font-weight:600;">&#10003; Valid Across All NCR Locations</div>
+      </div>
+      <div style="text-align:center;">
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.2rem;">Show this pass or mention your phone number at the gym reception desk.</p>
+        <a href="tel:7011718612" class="btn btn-primary" style="width:100%;">&#128222; Call Reception: 7011718612</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile nav
+    var menuToggle = document.getElementById('menuToggle');
+    var navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', function() { navMenu.classList.toggle('active'); });
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.addEventListener('click', function() { navMenu.classList.remove('active'); });
+    });
+
+    // Animated counters
+    var counters = document.querySelectorAll('[data-count]');
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        io.unobserve(entry.target);
+        var el = entry.target;
+        var target = parseInt(el.dataset.count, 10);
+        var current = 0;
+        var step = target / (1600 / 16);
+        var suffix = target >= 1000 ? '+' : (target === 98 ? '%' : '');
+        function tick() {
+          current = Math.min(current + step, target);
+          el.textContent = Math.floor(current).toLocaleString('en-IN') + suffix;
+          if (current < target) requestAnimationFrame(tick);
+        }
+        tick();
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function(c) { io.observe(c); });
+
+    // BMI Calculator
+    function calculateBMI() {
+      var h = parseFloat(document.getElementById('calcHeight').value);
+      var w = parseFloat(document.getElementById('calcWeight').value);
+      var goal = document.getElementById('calcGoal').value;
+      if (!h || !w || h <= 0 || w <= 0) { alert('Please enter valid height and weight.'); return; }
+      var bmi = (w / ((h/100) * (h/100))).toFixed(1);
+      document.getElementById('bmiValue').textContent = bmi;
+      document.getElementById('bmiResult').style.display = 'block';
+      var status, advice;
+      if (bmi < 18.5) {
+        status = 'Underweight — Bulking Protocol Recommended';
+        advice = 'We recommend a calorie-dense diet coupled with heavy compound lifts in our Strength Arena to build lean muscle mass.';
+      } else if (bmi <= 24.9) {
+        status = 'Optimal Healthy Weight';
+        advice = 'Great baseline! We will fine-tune your macro balance and introduce progressive overload training for peak definition.';
+      } else if (bmi <= 29.9) {
+        status = 'Overweight — Fat Shred Matrix';
+        advice = 'Our HIIT cardio, functional turf workouts, and calorie-deficit nutrition will rapidly burn visceral fat while preserving muscle.';
+      } else {
+        status = 'Obese Range — Structured Medical Fitness';
+        advice = 'Our coaches will guide you with low-impact cardio (heated pool &amp; rowing) and customized nutrition for safe, sustainable fat loss.';
+      }
+      document.getElementById('bmiStatus').textContent = status;
+      document.getElementById('bmiAdvice').textContent = advice;
+    }
+
+    // Modal
+    function openPassModal(name) {
+      document.getElementById('modalPassName').textContent = (name || 'VIP GUEST').toUpperCase();
+      document.getElementById('passModal').classList.add('active');
+    }
+    function closePassModal() { document.getElementById('passModal').classList.remove('active'); }
+    function handlePassSubmit(e) {
+      e.preventDefault();
+      openPassModal(document.getElementById('passName').value);
+    }
+    document.getElementById('passModal').addEventListener('click', function(e) {
+      if (e.target.id === 'passModal') closePassModal();
+    });
+  </script>
+</body>
+</html>
